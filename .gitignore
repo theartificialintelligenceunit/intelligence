@@ -168,3 +168,6 @@ gulpfile.tmp.*
 /html-starter
 /html-demo
 /html-starter-demo
+
+# IntelliJ IDEA
+.idea
