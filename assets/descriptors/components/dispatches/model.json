@@ -1,7 +1,7 @@
 {
     "details": [
         {
-            "section": "name",
+            "section": "type",
             "description": "Token Classification Model"
         },
         {
