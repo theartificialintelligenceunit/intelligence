@@ -104,6 +104,12 @@ JavaScript Modules
 * [Module Errors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/import_decl_module_top_level#importing_in_a_non-module_script)
 * [SCRIPT](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 
+ICONS
+* [icons](https://demos.themeselection.com/sneat-bootstrap-html-admin-template-free/html/icons-boxicons.html)
+* [icons guide](https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation//Icons.html)
+* [icons library](https://boxicons.com)
+
+
 <br>
 <br>
 
