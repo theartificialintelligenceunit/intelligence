@@ -105,3 +105,14 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+
+.drop-cap {
+  color: #100f10;
+  float: left;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}

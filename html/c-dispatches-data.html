@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="../assets/css/libraries/core.css" class="template-customizer-core-css" />
   <link rel="stylesheet" href="../assets/css/libraries/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="../assets/css/libraries/demo.css" />
+  <link rel="stylesheet" href="../assets/css/libraries/tables.css" />
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.6/css/perfect-scrollbar.min.css"
@@ -115,6 +116,63 @@
               <div class="card">
                 <h5 class="card-header">Data</h5>
               </div>
+
+              <pre id="data"></pre>
+              <script>
+                fetch('../assets/descriptors/components/dispatches/data.json')
+                  .then(response => response.json())
+                  .then(data => {
+                    // Call function to display table
+                    createTable(data.details);
+                  })
+                  .catch(error => console.error('Error:', error));
+
+                function createTable(data) {
+                  const table = document.createElement('table');
+                  table.classList.add('briefings');
+                  const colGroup = document.createElement('colgroup');
+
+                  const col_a = document.createElement('col');
+                  col_a.setAttribute('span', '1');
+                  col_a.setAttribute('style', 'width: 15.5%;');
+
+                  const col_b = document.createElement('col');
+                  col_b.setAttribute('span', '1');
+                  col_b.setAttribute('style', 'width: 47.5%;');
+
+                  const tableHead = document.createElement('thead');
+                  const tableBody = document.createElement('tbody');
+
+                  // Append the table head and body to table
+                  table.appendChild(colGroup);
+                  colGroup.appendChild(col_a);
+                  colGroup.appendChild(col_b);
+                  table.appendChild(tableHead);
+                  table.appendChild(tableBody);
+
+                  // Creating table head
+                  let row = tableHead.insertRow();
+                  Object.keys(data[0]).forEach(key => {
+                    let th = document.createElement('th');
+                    th.textContent = key.toUpperCase();
+                    row.appendChild(th);
+                  });
+
+                  // Creating table body
+                  data.forEach(item => {
+                    let row = tableBody.insertRow();
+                    Object.values(item).forEach(value => {
+                      let cell = row.insertCell();
+                      // noinspection JSValidateTypes
+                      cell.innerHTML = value;
+                    });
+                  });
+
+                  // Append the table to the HTML document
+                  document.getElementById('data').appendChild(table);
+                }
+              </script>
+
             </div>
             <!-- /Basic -->
 

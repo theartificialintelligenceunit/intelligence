@@ -35,6 +35,43 @@ docker run --rm -i -t -p 8080:80 -w /app
 <br>
 <br>
 
+### Snippet
+
+| Sentence #    | Word           | POS  | Tag   |
+|:--------------|:---------------|:-----|:------|
+| Sentence: 461 | The            | DT   | O     |
+| &nbsp;        | report         | NN   | O     |
+| &nbsp;        | said           | VBD  | O     |
+| &nbsp;        | the            | DT   | O     |
+| &nbsp;        | ancient        | JJ   | O     |
+| &nbsp;        | communities    | NNS  | O     |
+| &nbsp;        | were           | VBD  | O     |
+| &nbsp;        | discovered     | VBN  | O     |
+| &nbsp;        | in             | IN   | O     |
+| &nbsp;        | the            | DT   | O     |
+| &nbsp;        | northern       | JJ   | O     |
+| &nbsp;        | part           | NN   | O     |
+| &nbsp;        | of             | IN   | O     |
+| &nbsp;        | Shaanxi        | NNP  | B-geo |
+| &nbsp;        | province       | NN   | O     |
+| &nbsp;        | ,              | ,    | O     |
+| &nbsp;        | a              | DT   | O     |
+| &nbsp;        | region         | NN   | O     |
+| &nbsp;        | known          | VBN  | O     |
+| &nbsp;        | for            | IN   | O     |
+| &nbsp;        | its            | PRP$ | O     |
+| &nbsp;        | archaeological | JJ   | O     |
+| &nbsp;        | treasures      | NNS  | O     |
+| &nbsp;        | 0              | 0    | O     |
+| Sentence: 462 | Xinhua         | NNP  | B-org |
+| &nbsp;        | says           | VBZ  | O     |
+| &nbsp;        | the            | DT   | O     |
+| &nbsp;        | ruins          | NNS  | O     |
+| &nbsp;        | show           | VBP  | O     |
+
+<br>
+<br>
+
 
 ### References
 
@@ -66,6 +103,12 @@ JavaScript Modules
 * [Modules](https://javascript.info/modules)
 * [Module Errors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/import_decl_module_top_level#importing_in_a_non-module_script)
 * [SCRIPT](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+
+ICONS
+* [icons](https://demos.themeselection.com/sneat-bootstrap-html-admin-template-free/html/icons-boxicons.html)
+* [icons guide](https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation//Icons.html)
+* [icons library](https://boxicons.com)
+
 
 <br>
 <br>
