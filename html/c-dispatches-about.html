@@ -115,15 +115,14 @@
             <div class="col-md-12 mb-4">
               <div class="card">
 
-                <table style="width: 65%; margin-left: 65px;">
+                <!--suppress CssNoGenericFontName -->
+                <table style="width: 65%; margin-left: 65px; margin-bottom: 265px; font-family: Canela; font-size: 18px;">
                   <colgroup>
                     <col span="1" style="width: 85%;">
                   </colgroup>
-                  <tr>
-                    <td><h4 style="font-variant: small-caps">Background</h4></td>
-                  </tr>
+
                   <tr><td>
-                    Organisations identify or detect words/strings of interest within documents or data blobs for a variety of purposes, e.g., knowledge graph development, text redaction, criminal investigations, etc.  Organisations may opt for manual word detection if off-the-shelf solutions cannot address their needs.  For example, most redaction software solutions focus on detecting and redacting words/strings of a narrow set of categories, and it is rarely possible to adapt the solution to the detection of words/strings of bespoke categories.
+                    <span class="drop-cap">B</span><b>ACKGROUND</b>. &nbsp; &nbsp; Organisations identify or detect words/strings of interest within documents or data blobs for a variety of purposes, e.g., knowledge graph development, text redaction, criminal investigations, etc.  Organisations may opt for manual word detection if off-the-shelf solutions cannot address their needs.  For example, most redaction software solutions focus on detecting and redacting words/strings of a narrow set of categories, and it is rarely possible to adapt the solution to the detection of words/strings of bespoke categories.
 
                     <br><br>
 
@@ -133,13 +132,9 @@
 
                     <br><br><br><br>
 
-                  </td>
-                  </tr>
-                  <tr>
-                    <td><h4 style="font-variant: small-caps">Concept</h4></td>
-                  </tr>
+                  </td></tr>
                   <tr><td>
-                    For a specific token classification dependent problem, an artificial intelligence engineer can
+                    <b>CONCEPT.</b> &nbsp; &nbsp; For a specific token classification dependent problem, an artificial intelligence engineer can<br><br>
                     <ul>
                       <li>Develop a token classification model per language model architecture, e.g., <a href="https://arxiv.org/abs/1907.11692">RoBERTa (Robustly Optimized BERT Pretraining Approach)</a>, <a href="https://arxiv.org/abs/2003.10555">ELECTRA (Efficiently Learning an Encoder that Classifies Token Replacements Accurately)</a>.  Per architecture, <a href="https://wires.onlinelibrary.wiley.com/doi/epdf/10.1002/widm.1484">hyperparameter optimisation/tuning techniques</a>, and <a href="https://docs.ray.io/en/latest/tune/index.html">libraries</a>, aid the development of quite effective models, subject to early stopping, etc., constraints.</li>
                       <li>Select the best model amongst the set of models; a single model per architecture.</li>
@@ -162,11 +157,11 @@
 
                     <b>Note</b>, the best model of a set must undergo (a) mathematical evaluation, and (b) business/cost evaluation.  The latter is critical because an acceptable mathematical metric, e.g., $precision > 0.9$ does not necessarily lead to excellent business/cost metrics.<br><br>
 
-                  </td>
-                  </tr>
+                  </td></tr>
                 </table>
 
               </div>
+
             </div>
             <!-- /Basic -->
 
