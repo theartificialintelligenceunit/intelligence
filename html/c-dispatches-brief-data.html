@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="../assets/css/libraries/core.css" class="template-customizer-core-css" />
   <link rel="stylesheet" href="../assets/css/libraries/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="../assets/css/libraries/demo.css" />
+  <link rel="stylesheet" href="../assets/css/libraries/tables.css" />
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.6/css/perfect-scrollbar.min.css"
@@ -116,7 +117,6 @@
                 <h5 class="card-header">Data</h5>
               </div>
 
-
               <pre id="data"></pre>
               <script>
                 fetch('../assets/descriptors/components/dispatches/data.json')
@@ -129,11 +129,12 @@
 
                 function createTable(data) {
                   const table = document.createElement('table');
+                  table.classList.add('briefings');
                   const colGroup = document.createElement('colgroup');
 
                   const col_a = document.createElement('col');
                   col_a.setAttribute('span', '1');
-                  col_a.setAttribute('style', 'width: 21.5%;');
+                  col_a.setAttribute('style', 'width: 15.5%;');
 
                   const col_b = document.createElement('col');
                   col_b.setAttribute('span', '1');
@@ -171,10 +172,6 @@
                   document.getElementById('data').appendChild(table);
                 }
               </script>
-
-
-
-
 
             </div>
             <!-- /Basic -->
