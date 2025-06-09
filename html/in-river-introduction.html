@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 
-<!--suppress ALL -->
-<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
-      data-assets-path="../assets/" data-template="vertical-menu-template-free">
+<html lang="en" class="light-style  layout-menu-fixed" dir="ltr" data-theme="theme-default"
+      data-assets-path="assets/" data-template="vertical-menu-template-free">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Page</title>
+  <title>Intelligence</title>
 
   <meta name="description" content="" />
 
@@ -18,7 +17,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"/>
 
   <!-- Icons. Uncomment required icon fonts -->
   <link rel="stylesheet" href="../assets/fonts/boxicons.css" />
@@ -36,7 +37,6 @@
   <!-- Helpers -->
   <script src="../assets/js/libraries/helpers.js"></script>
   <script src="../assets/js/libraries/menu.js"></script>
-  <script src="../assets/js/libraries/latex.js" async></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
           integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -53,6 +53,7 @@
 </head>
 
 <body>
+
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar">
   <div class="layout-container">
@@ -109,22 +110,32 @@
 
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dispatches /</span> About</h4>
 
-          <div class="row">
-            <!-- Basic -->
-            <div class="col-md-12 mb-4">
+          <div class="row" style="margin-bottom: 450px;">
+            <div class="col-lg-8 mb-4 order-0">
+
               <div class="card">
+                <div class="d-flex align-items-end row">
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title text-primary">Predicting river levels, and more.</h5>
+                      <p class="mb-4">
+                        This is a live system. It predicts river levels dozens of hours ahead, and provides supplementary material, predominantly for officials aiding Scottish Government Resilience activities. Models are re-trained, and new predictions are provided, weekly; whereas supplementary material is updated daily.  All automatically.  Upcoming, (a) forecast-activated alerts, and (b) weather-warning-activated prediction events.<br><br>
 
-                <!--suppress CssNoGenericFontName -->
-
-
+                        For more information, including code, setup and configurations, etc. visit <a href="https://github.com/repatterning" class="btn btn-sm btn-outline-primary">GitHub</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-5 text-center text-sm-left">
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="col-lg-4 col-md-4 order-1">
 
             </div>
-            <!-- /Basic -->
-
           </div>
+
         </div>
         <!-- / Content -->
 
@@ -132,11 +143,11 @@
         <footer class="content-footer footer bg-footer-theme">
           <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
             <div class="mb-2 mb-md-0">
-              ©
+              Artificial Intelligence Unit, Scottish Government ©
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              , based on a free template by
+              <br>This theme is based on a free template by
               <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
             </div>
             <div>
@@ -173,11 +184,14 @@
 
 <!-- end build -->
 
+
 <!-- Main JS -->
 <script src="../assets/js/libraries/main.js"></script>
 
+
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
 </body>
 
 </html>

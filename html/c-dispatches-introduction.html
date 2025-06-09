@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<!--suppress ALL -->
 <html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
       data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
@@ -19,14 +20,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"/>
 
-  <!-- Icons -->
+  <!-- Icons. Uncomment required icon fonts -->
   <link rel="stylesheet" href="../assets/fonts/boxicons.css" />
 
   <!-- Core CSS -->
   <link rel="stylesheet" href="../assets/css/libraries/core.css" class="template-customizer-core-css" />
   <link rel="stylesheet" href="../assets/css/libraries/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="../assets/css/libraries/demo.css" />
-  <link rel="stylesheet" href="../assets/css/libraries/tables.css" />
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.6/css/perfect-scrollbar.min.css"
@@ -36,7 +36,7 @@
   <!-- Helpers -->
   <script src="../assets/js/libraries/helpers.js"></script>
   <script src="../assets/js/libraries/menu.js"></script>
-  <script src="../assets/js/libraries/latex.js"></script>
+  <script src="../assets/js/libraries/latex.js" async></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
           integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -90,11 +90,17 @@
     <div class="layout-page">
 
       <!-- Navbar -->
-      <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+      <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+           id="layout-navbar">
         <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-          <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)"><i class="bx bx-menu bx-sm"></i></a>
+          <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+            <i class="bx bx-menu bx-sm"></i>
+          </a>
         </div>
-        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse"></div>
+
+        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+        </div>
       </nav>
       <!-- / Navbar -->
 
@@ -103,45 +109,32 @@
 
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dispatches /</span> Data Profiles</h4>
 
-          <div class="row">
-
-            <div class="col-md-12">
+          <div class="row" style="margin-bottom: 450px;">
+            <div class="col-lg-8 mb-4 order-0">
 
               <div class="card">
+                <div class="d-flex align-items-end row">
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title text-primary">Fine-tuning a large language model for a token classification task.</h5>
+                      <p class="mb-4">
+                        The core item fine-tunes a large language model for token classification purposes, i.e., word or string classification purposes.  For data scientists, and machine learning, artificial intelligence, engineers.<br><br>
 
-                <table style="width: 80%; margin-left: 65px; margin-bottom: 400px">
-                  <colgroup>
-                    <col span="1" style="width: 85%;">
-                  </colgroup>
-                  <tr><td><h5>The distribution of the training, validating, and testing data</h5></td></tr>
-                  <tr><td>
-
-                    <iframe src="https://d22j2jhm9iagpk.cloudfront.net/src/_distributions.html" width="100%" height="480"></iframe>
-
-                    <figure>
-                      <figcaption>The annotations $B$ & $I$ denote beginning & inside, respectively. Whereas $O$ denotes outside/other/miscellaneous. The categories herein are organisation (ORG), geographic entity (GEO), person (PER), time (TIM), geo-political entity (GPE).
-                      </figcaption>
-                    </figure>
-
-                  </td></tr>
-                  <tr><td>
-                    The development of token classification models requires the annotation of data entities. An entity is a word, text piece. Each entity belongs to a single class/category, e.g., river, lake, island, or other; in this context, river/lake/island are named entities, all other entities are other/miscellaneous/un-named entities. Each named entity must be annotated according to a selected annotation scheme. Annotation scheme examples:<br><br>
-                    <ul>
-                      <li><b>IO</b> $\rightarrow$ $I$: named entity tokens, $O$: other entities.</li>
-                      <li><b>BIO</b> $\rightarrow$ $B$: denotes a token at the beginning of a named entity, $I$: denotes a token inside a named entity, $O$: represents tokens that are not part of a named entity.</li>
-                      <li><b>IOE</b> $\rightarrow$ $I$: denotes a token inside a named entity, $O$: denotes an un-named entity, $E$: denotes a token at the end of a named entity.</li>
-                      <li><b>IOBES</b> $\rightarrow$ $I$: inside, $O$: outside/un-named, $B$: beginning, $E$: end, $S$: single-token entity</li>
-                    </ul>
-                  </td></tr>
-
-                </table>
-
+                        For further information, including code, setup and configurations, etc. visit <a href="https://github.com/membranes" class="btn btn-sm btn-outline-primary" target="_blank">GitHub</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-5 text-center text-sm-left">
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="col-lg-4 col-md-4 order-1">
 
+            </div>
           </div>
+
         </div>
         <!-- / Content -->
 
@@ -156,7 +149,8 @@
               <br>This theme is based on a free template by
               <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
             </div>
-            <div></div>
+            <div>
+            </div>
           </div>
         </footer>
         <!-- / Footer -->
@@ -195,4 +189,5 @@
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
+
 </html>
