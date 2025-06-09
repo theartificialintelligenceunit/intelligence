@@ -17,8 +17,8 @@
       "note": "The <a href='https://github.com/membranes/.github/tree/master/data'>data page's</a> dataset.csv file."
     },
     {
-      "section": "profile",
-      "note": "<a href='../src/data-profile.html'>profile</a>"
+      "section": "profiles",
+      "note": "<a href='c-dispatches-data-profiles.html'>profiles</a>"
     }
   ]
 }

@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 
-<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
-      data-assets-path="../assets/" data-template="vertical-menu-template-free">
-
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+  />
 
   <title>Page</title>
 
@@ -17,7 +25,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Icons. Uncomment required icon fonts -->
   <link rel="stylesheet" href="../assets/fonts/boxicons.css" />
@@ -26,15 +37,17 @@
   <link rel="stylesheet" href="../assets/css/libraries/core.css" class="template-customizer-core-css" />
   <link rel="stylesheet" href="../assets/css/libraries/theme-default.css" class="template-customizer-theme-css" />
   <link rel="stylesheet" href="../assets/css/libraries/demo.css" />
-  <link rel="stylesheet" href="../assets/css/libraries/tables.css" />
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.6/css/perfect-scrollbar.min.css"
         integrity="sha512-ygIxOy3hmN2fzGeNqys7ymuBgwSCet0LVfqQbWY10AszPMn2rB9JY0eoG0m1pySicu+nvORrBmhHVSt7+GI9VA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Page CSS -->
+
   <!-- Helpers -->
   <script src="../assets/js/libraries/helpers.js"></script>
+
   <script src="../assets/js/libraries/menu.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -105,77 +118,50 @@
 
       <!-- Content wrapper -->
       <div class="content-wrapper">
-
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dispatches /</span> Data</h4>
+          <h4 class="fw-bold py-3 mb-4">
+            <span class="text-muted fw-light">River Levels /</span> Split
+          </h4>
 
           <div class="row">
-            <!-- Basic -->
-            <div class="col-md-12 mb-4">
+            <div class="col-md-12">
+              <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="in-river-predictions.html">
+                    <i class="bx bx-fingerprint me-1"></i> Predictions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="in-river-drift.html"><i class="bx bx-abacus me-1"></i> Drift</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="in-river-contrasts.html">
+                    <i class="bx bx-network-chart me-1"></i> Contrasts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="javascript:void(0);">
+                    <i class="bx bx-network-chart me-1"></i> Split</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="in-river-extrema.html">
+                    <i class="bx bx-network-chart me-1"></i> Extrema</a>
+                </li>
+              </ul>
               <div class="card">
-                <h5 class="card-header">Data</h5>
+
+                <br><br>
+
+                <table style="width: 90%; margin-left: auto; margin-right: auto; margin-top: 35px;">
+                  <colgroup>
+                    <col span="1" style="width: 80%;">
+                  </colgroup>
+                  <tr>
+                    <td><iframe src="https://d3h5uy7f3ttkyl.cloudfront.net/src/_split.html" width="80%" height="800"></iframe></td>
+                  </tr>
+                </table>
+
               </div>
-
-              <pre id="data"></pre>
-              <script>
-                fetch('../assets/descriptors/components/dispatches/data.json')
-                  .then(response => response.json())
-                  .then(data => {
-                    // Call function to display table
-                    createTable(data.details);
-                  })
-                  .catch(error => console.error('Error:', error));
-
-                function createTable(data) {
-                  const table = document.createElement('table');
-                  table.classList.add('briefings');
-                  const colGroup = document.createElement('colgroup');
-
-                  const col_a = document.createElement('col');
-                  col_a.setAttribute('span', '1');
-                  col_a.setAttribute('style', 'width: 15.5%;');
-
-                  const col_b = document.createElement('col');
-                  col_b.setAttribute('span', '1');
-                  col_b.setAttribute('style', 'width: 47.5%;');
-
-                  const tableHead = document.createElement('thead');
-                  const tableBody = document.createElement('tbody');
-
-                  // Append the table head and body to table
-                  table.appendChild(colGroup);
-                  colGroup.appendChild(col_a);
-                  colGroup.appendChild(col_b);
-                  table.appendChild(tableHead);
-                  table.appendChild(tableBody);
-
-                  // Creating table head
-                  let row = tableHead.insertRow();
-                  Object.keys(data[0]).forEach(key => {
-                    let th = document.createElement('th');
-                    th.textContent = key.toUpperCase();
-                    row.appendChild(th);
-                  });
-
-                  // Creating table body
-                  data.forEach(item => {
-                    let row = tableBody.insertRow();
-                    Object.values(item).forEach(value => {
-                      let cell = row.insertCell();
-                      // noinspection JSValidateTypes
-                      cell.innerHTML = value;
-                    });
-                  });
-
-                  // Append the table to the HTML document
-                  document.getElementById('data').appendChild(table);
-                }
-              </script>
-
             </div>
-            <!-- /Basic -->
-
           </div>
         </div>
         <!-- / Content -->
@@ -198,7 +184,6 @@
         <!-- / Footer -->
 
         <div class="content-backdrop fade"></div>
-
       </div>
       <!-- Content wrapper -->
 
@@ -209,7 +194,6 @@
 
   <!-- Overlay -->
   <div class="layout-overlay layout-menu-toggle"></div>
-
 </div>
 <!-- / Layout wrapper -->
 
@@ -227,11 +211,14 @@
 
 <!-- end build -->
 
+<!-- Vendors JS -->
+
 <!-- Main JS -->
 <script src="../assets/js/libraries/main.js"></script>
+
+<!-- Page JS -->
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
-
 </html>
