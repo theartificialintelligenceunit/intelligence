@@ -157,22 +157,16 @@
 
                   <div class="card">
 
-                    <p class="mb-4" style="margin-left: 35px">
-
-                      <br><br>The timeliness of a gauge's drift series depends on the availability pattern of the underlying raw river level measures.<br><br>
-
-                      At present, the drift of each gauge's time series is quantified via the Jensen-Shannon Distance
-                      $\in [0 \quad 1]$, and the Wasserstein Metric/Distance. Whilst the Jensen-Shannon Distance is a measure of similarity between two distributions, the Wasserstein Distance is a distance measure [<a href="https://arxiv.org/pdf/1904.08994" target="_blank">Part 6</a>] between a pair of distributions.  Herein, the distributions of a drift score are the data sets of two contiguous years.
-                    </p>
-
-                    <br><br>
-
-                    <table style="width: 69%; margin-left: auto; margin-right: auto; margin-top: 35px;">
+                    <table style="width: 80%; margin-left: auto; margin-right: auto; margin-top: 35px;">
                       <colgroup>
                         <col span="1" style="width: 90%;">
                       </colgroup>
+                      <tr><td>
+                        <p><br><br>Note, the timeliness of a gauge's drift series depends on the availability pattern of the underlying raw river level measures.  At present, the drift of each gauge's time series is quantified via the Jensen-Shannon Distance
+                          $\in [0 \quad 1]$, and the Wasserstein Metric/Distance. Whilst the Jensen-Shannon Distance is a measure of similarity between two distributions, the Wasserstein Distance is a distance measure [<a href="https://arxiv.org/pdf/1904.08994" target="_blank">Part 6</a>] between a pair of distributions.  Herein, the distributions of a drift score are the data sets of two contiguous years.</p>
+                      </td></tr>
                       <tr>
-                        <td><iframe src="https://d3h5uy7f3ttkyl.cloudfront.net/src/_drift.html" width="100%" height="800"></iframe></td>
+                        <td><br><iframe src="https://d3h5uy7f3ttkyl.cloudfront.net/src/_drift.html" width="100%" height="800"></iframe></td>
                       </tr>
                     </table>
 
