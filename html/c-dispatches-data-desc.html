@@ -110,69 +110,107 @@
         <div class="container-xxl flex-grow-1 container-p-y">
           <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dispatches /</span> Data</h4>
 
-          <div class="row">
-            <!-- Basic -->
-            <div class="col-md-12 mb-4">
-              <pre id="data"></pre>
-              <script>
-                fetch('../assets/descriptors/components/dispatches/data.json')
-                  .then(response => response.json())
-                  .then(data => {
-                    // Call function to display table
-                    createTable(data.details);
-                  })
-                  .catch(error => console.error('Error:', error));
+          <div class="row" style="margin-bottom: 450px;">
 
-                function createTable(data) {
-                  const table = document.createElement('table');
-                  table.classList.add('briefings');
-                  const colGroup = document.createElement('colgroup');
+            <div class="col-md-12">
 
-                  const col_a = document.createElement('col');
-                  col_a.setAttribute('span', '1');
-                  col_a.setAttribute('style', 'width: 15.5%;');
 
-                  const col_b = document.createElement('col');
-                  col_b.setAttribute('span', '1');
-                  col_b.setAttribute('style', 'width: 47.5%;');
+              <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="c-dispatches-introduction.html">
+                    <i class="bx bx-home-smile me-1"></i> Introduction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="c-dispatches-app.html">
+                    <i class="bx bx-fingerprint me-1"></i> APP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="c-dispatches-metrics-error.html">
+                    <i class="bx bx-network-chart me-1"></i> Error Metrics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="c-dispatches-metrics-cost.html">
+                    <i class="bx bx-network-chart me-1"></i> Cost Metrics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="c-dispatches-model-desc.html">
+                    <i class="bx bxs-info-circle me-1"></i> Model Description</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="javascript:void(0);">
+                    <i class="bx bxs-info-circle me-1"></i> Data Description</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="c-dispatches-data-profiles.html">
+                    <i class="bx bxs-info-circle me-1"></i> Data Profiles</a>
+                </li>
+              </ul>
 
-                  const tableHead = document.createElement('thead');
-                  const tableBody = document.createElement('tbody');
+              <div class="card">
 
-                  // Append the table head and body to table
-                  table.appendChild(colGroup);
-                  colGroup.appendChild(col_a);
-                  colGroup.appendChild(col_b);
-                  table.appendChild(tableHead);
-                  table.appendChild(tableBody);
+                <pre id="data"></pre>
+                <script>
+                  fetch('../assets/descriptors/components/dispatches/data.json')
+                    .then(response => response.json())
+                    .then(data => {
+                      // Call function to display table
+                      createTable(data.details);
+                    })
+                    .catch(error => console.error('Error:', error));
 
-                  // Creating table head
-                  let row = tableHead.insertRow();
-                  Object.keys(data[0]).forEach(key => {
-                    let th = document.createElement('th');
-                    th.textContent = key.toUpperCase();
-                    row.appendChild(th);
-                  });
+                  function createTable(data) {
+                    const table = document.createElement('table');
+                    table.classList.add('briefings');
+                    const colGroup = document.createElement('colgroup');
 
-                  // Creating table body
-                  data.forEach(item => {
-                    let row = tableBody.insertRow();
-                    Object.values(item).forEach(value => {
-                      let cell = row.insertCell();
-                      // noinspection JSValidateTypes
-                      cell.innerHTML = value;
+                    const col_a = document.createElement('col');
+                    col_a.setAttribute('span', '1');
+                    col_a.setAttribute('style', 'width: 15.5%;');
+
+                    const col_b = document.createElement('col');
+                    col_b.setAttribute('span', '1');
+                    col_b.setAttribute('style', 'width: 47.5%;');
+
+                    const tableHead = document.createElement('thead');
+                    const tableBody = document.createElement('tbody');
+
+                    // Append the table head and body to table
+                    table.appendChild(colGroup);
+                    colGroup.appendChild(col_a);
+                    colGroup.appendChild(col_b);
+                    table.appendChild(tableHead);
+                    table.appendChild(tableBody);
+
+                    // Creating table head
+                    let row = tableHead.insertRow();
+                    Object.keys(data[0]).forEach(key => {
+                      let th = document.createElement('th');
+                      th.textContent = key.toUpperCase();
+                      row.appendChild(th);
                     });
-                  });
 
-                  // Append the table to the HTML document
-                  document.getElementById('data').appendChild(table);
-                }
-              </script>
+                    // Creating table body
+                    data.forEach(item => {
+                      let row = tableBody.insertRow();
+                      Object.values(item).forEach(value => {
+                        let cell = row.insertCell();
+                        // noinspection JSValidateTypes
+                        cell.innerHTML = value;
+                      });
+                    });
+
+                    // Append the table to the HTML document
+                    document.getElementById('data').appendChild(table);
+                  }
+                </script>
+
+              </div>
 
             </div>
-            <!-- /Basic -->
+
 
           </div>
+
         </div>
         <!-- / Content -->
 
