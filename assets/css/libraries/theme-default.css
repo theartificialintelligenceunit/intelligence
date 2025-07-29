@@ -778,10 +778,10 @@ html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item .menu-lin
 
 .bg-footer-theme {
   background-color: #ffffff !important;
-  color: #697a8d;
+  color: #000000;
 }
 .bg-footer-theme .footer-link {
-  color: #697a8d;
+  color: #696cff;
 }
 .bg-footer-theme .footer-link:hover, .bg-footer-theme .footer-link:focus {
   color: #566a7f;
