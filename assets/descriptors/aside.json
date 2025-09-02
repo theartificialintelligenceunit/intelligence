@@ -1,11 +1,5 @@
 {
   "content": [
-    {"label": "<li class='menu-item active'><a href='index.html' class='menu-link'><i class='menu-icon tf-icons bx bx-home-circle'></i><div data-i18n='Analytics'>Introduction</div></a></li>"},
-    {"label": "<li class='menu-header small text-uppercase'><span class='menu-header-text'>In Service</span></li>"},
-    {"label": "<li class='menu-item'><a href='in-river-introduction.html' class='menu-link'><i class='menu-icon tf-icons bx bx-cube-alt'></i><div data-i18n='River Levels'>River Levels</div></a></li>"},
-    {"label": "<li class='menu-header small text-uppercase'><span class='menu-header-text'>Pre</span></li>"},
-    {"label": "<li class='menu-item'><a href='pre-ae-introduction.html' class='menu-link'><i class='menu-icon tf-icons bx bx-lock-open-alt'></i><div data-i18n='Authentications'>Accident & Emergency</div></a></li>"},
-    {"label": "<li class='menu-header small text-uppercase'><span class='menu-header-text'>Components</span></li>"},
-    {"label": "<li class='menu-item'><a href='c-dispatches-introduction.html' class='menu-link'><i class='menu-icon tf-icons bx bx-copy'></i><div data-i18n='Token Classification: Dispatches'>Token Classification: Dispatches</div></a></li>"}
+    {"label": "<li class='menu-item active'><a href='index.html' class='menu-link'><i class='menu-icon tf-icons bx bx-home-circle'></i><div data-i18n='Analytics'>Introduction</div></a></li>"}
   ]
 }
